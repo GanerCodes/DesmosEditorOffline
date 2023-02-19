@@ -20,7 +20,7 @@ function createWindow(filePath) {
             preload: path.join(__dirname, "backend", "preload.js")
         }
     });
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     // session.defaultSession.loadExtension("../darkreader/build/release/chrome").then(console.log);
 
     Menu.setApplicationMenu(menu);
