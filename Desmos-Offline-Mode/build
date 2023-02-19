@@ -1,0 +1,3 @@
+yarn
+yarn run package-linux-x64
+./release-builds/desmos-offline-mode-linux-x64/desmos-offline-mode

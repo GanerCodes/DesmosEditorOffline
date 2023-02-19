@@ -1,0 +1,347 @@
+:root {
+    --darkreader-neutral-background: #000000;
+    --darkreader-neutral-text: #ffffff;
+    --darkreader-selection-background: #0034bf;
+    --darkreader-selection-text: #ffffff;
+ }
+
+html {
+    background-color: #000000 !important;
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #000000;
+    border-color: #5e5e5e;
+    color: #ffffff;
+}
+a {
+    color: #0d9aff;
+}
+table {
+    border-color: #464646;
+}
+::placeholder {
+    color: #cbcbcb;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+::-webkit-scrollbar {
+    background-color: #000000;
+    color: #bebebe;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1f1f1f;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #464646;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #343434;
+}
+::-webkit-scrollbar-corner {
+    background-color: #000000;
+}
+::selection {
+    background-color: #0034bf !important;
+    color: #ffffff !important;
+}
+::-moz-selection {
+    background-color: #0034bf !important;
+    color: #ffffff !important;
+}
+
+*:not(pre, pre *, code, .far, .fa, .glyphicon, [class*="vjs-"], .fab, .fa-github, .fas, .material-icons, .icofont, .typcn, mu, [class*="mu-"], .glyphicon, .icon) {
+  font-family: Monocraft !important;
+}
+.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator, div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], div[role="dialog"] div[role="document"], .dcg-grapher {
+    filter: invert(100%) hue-rotate(180deg) !important;
+}
+
+* {
+    font-style: normal !important;
+}
+.dcg-container.dcg-inverted-colors {
+    filter: hue-rotate(180deg) !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-selection, .dcg-calculator-api-container .dcg-mq-editable-field .dcg-mq-selection, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-selection .dcg-mq-non-leaf, .dcg-calculator-api-container .dcg-mq-editable-field .dcg-mq-selection .dcg-mq-non-leaf, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-selection .dcg-mq-scaled, .dcg-calculator-api-container .dcg-mq-editable-field .dcg-mq-selection .dcg-mq-scaled {
+    border-radius: 2.5px !important;
+    background: #7e236f !important;
+}
+.dcg-mq-cursor, .dcg-mq-blink {
+    visibility: visible !important;
+    background: none !important;
+    height: 111% !important;
+    transform: translate(-50%, -50%) scale(3.0, 1.0) translate(50%, 40%);
+    animation: colorRotate 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes colorRotate {
+    from { color: #6666ff; }
+    10%  { color: #0099ff; }
+    50%  { color: #00ff00; }
+    75%  { color: #ff3399; }
+    100% { color: #6666ff; }
+}
+.dcg-mq-operator-name, .dcg-mq-first, .dcg-mq-last, .dcg-mq-f {
+    padding-left : 0px !important;
+    padding-right: 0px !important;
+    margin-left  : 0px !important;
+    margin-right : 0px !important;
+}
+.dcg-calculator-api-container .dcg-container .dcg-label-container:not(.dcg-label-visible) input.dcg-disabled-input {
+    background: rgba(0.1, 0.1, 0.1, 0.8) !important;
+}
+.dcg-calculator-api-container .dcg-mq-root-block, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-root-block {
+    padding: 3px !important;
+}
+.dcg-tab, .dcg-action-drag, .dcg-action-icon-touch {}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem .dcg-fade-container .dcg-main {
+    padding-top   : 0px  !important;
+    padding-bottom: 0px  !important;
+    padding-right : 0px  !important;
+    padding-left  : 23px !important;
+    font-size: 100% !important;
+}
+.dcg-calculator-api-container .dcg-top-level-icon .dcg-top-level-delete, .dcg-calculator-api-container .dcg-top-level-icon .dcg-icon-replace, .dcg-calculator-api-container .dcg-top-level-icon .dcg-icon-lock {
+    padding: 0px !important;
+    padding-right: 2px !important;
+    font-size: 75% !important;
+}
+.dcg-calculator-api-container .dcg-tap-container .dcg-mq-math-mode .dcg-mq-sub {
+    font-size: 100% !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-selected .dcg-tab, .dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-dragging .dcg-tab,
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem .dcg-tab {
+    width: 20px !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem .dcg-fade-container {
+    padding-bottom: 0px !important;
+}
+.dcg-calculator-api-container .dcg-icon-error:before,
+.dcg-tooltipped-error,
+.dcg-icon-error {
+    visibility: hidden !important;
+    position: inherit !important;
+}
+.dcg-calculator-api-container .dcg-icon-remove:before {
+    font-size: 75% !important;
+}
+.dcg-calculator-api-container .dcg-expression-icon-container {
+    position: inherit !important;
+    transform: scale(0.75) translate(-2px,-5px) !important;
+    width: inherit !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata .dcg-row:not(:first-of-type) .dcg-cell {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-tap-container .dcg-mq-math-mode .dcg-mq-supsub {
+    margin: 0px !important;
+}
+.dcg-calculator-api-container .dcg-container .dcg-mq-editable-field:not(.dcg-no-fadeout)::after,
+.dcg-calculator-api-container .dcg-container .dcg-mq-editable-field:not(.dcg-no-fadeout) .dcg-mq-root-block.dcg-mq-editing-overflow-left::before,
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata:not(.dcg-focus-in-right-column)::after, 
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-table-container::after,
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata:not(.dcg-focus-in-bottom-row)::before,
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-table-container::before {
+    background: none !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-table-container {
+    padding-left: 0px !important;
+}
+.dcg-calculator-api-container .dcg-container .dcg-expression-top-bar {
+    padding: 0px !important;
+    height: 28px !important;
+    transform: translateY(-3.5px) !important;
+}
+.dcg-calculator-api-container .dcg-header .align-center-container {
+    visibility: hidden !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem {
+    border-bottom: none !important;
+    margin-top: 0px !important;
+    border-right: none !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-selected, .dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-dragging {
+    border-top: 1px solid rgb(51, 255, 0) !important;
+    border-bottom: 1px solid rgb(51, 255, 0) !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem {
+    border-top: 1px solid rgb(15, 16, 15) !important;
+}
+.dcg-calculator-api-container .dcg-create-sliders {
+    display: none !important;
+}
+.dcg-calculator-api-container .dcg-circular-icon.dcg-hidden::before {
+    border-color: #AAA !important;
+}
+.dcg-calculator-api-container .dcg-circular-icon {
+    transform: scale(0.4) translate(-25px, -24px) !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem .dcg-caret-container {
+    top: 1px !important;
+    left: 10px !important;
+    font-size: 50% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: inherit !important;
+    height: inherit !important;
+    text-align: center !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem .dcg-tab {
+    background-color: rgba(90, 30, 104, 0.5) !important;
+}
+.dcg-expressionitem.dcg-inFolder  {
+    background-color: rgba(90, 30, 104, 0.3) !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-inFolder .dcg-main {
+    margin-left: 5px !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressionfolder .dcg-main textarea.dcg-smart-textarea, .dcg-calculator-api-container .dcg-expressionitem.dcg-expressionfolder .dcg-main .dcg-displayTextarea {
+    padding-left: 0px !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-inFolder .dcg-fade-container::after {
+    border: none !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem .dcg-indent-in-folder {
+    margin-left: 32px !important;
+}
+.dcg-calculator-api-container .dcg-exppanel .dcg-expressionitem.dcg-inFolder .dcg-indent-in-folder {
+    margin-left: 36px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-hat-prefix {
+    margin-bottom: -0.3em !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-diacritic-above {
+    line-height: inherit !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-bracket-middle {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-fraction {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-binary-operator {
+    padding: 0em 0.1em !important;
+}
+.dcg-calculator-api-container .dcg-mq-root-block .dcg-mq-digit, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-root-block .dcg-mq-digit {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-fraction {
+    vertical-align: -0.45em !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-denominator {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-pillbox-container .dcg-overgraph-pillbox-elements {
+    transform: scale(0.5) translate(16px, -23.2px);
+}
+.dcg-right-buttons {
+    transform: scale(0.5) translate(35px, 0px);
+}
+.dcg-left-buttons {
+    transform: scale(0.7) translate(-12px, 0px);
+}
+.dcg-center-buttons {
+    visibility: hidden !important;
+}
+.dcg-graph-outer {
+    filter: hue-rotate(145deg) !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-int > .dcg-mq-supsub {
+    padding-right: 0px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-empty {
+    background: #00000000 !important;
+}
+.dcg-calculator-api-container .dcg-mq-editable-field.dcg-mq-empty:after, .dcg-calculator-api-container .dcg-mq-editable-field.dcg-mq-text-mode:after, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-empty:after {
+    content: "'" !important;
+}
+.dcg-calculator-api-container .dcg-expression-edit-actions .dcg-graphic {
+    visibility: hidden !important;
+}
+.dcg-calculator-api-container .dcg-expression-edit-actions:not(.dcg-limited-height) {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+.dcg-calculator-api-container .dcg-expression-edit-actions .dcg-exp-action-button {
+    width: fit-content !important;
+    height: fit-content !important;
+    align-self: center !important;
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-expression-edit-actions:not(.dcg-limited-height) {
+    display: flex !important;
+    height: min-content !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important; 
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-overarc {
+    border-top-color: #FFF !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata .dcg-row .dcg-cell.dcg-table-header {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata .dcg-row:first-of-type .dcg-cell:not(:first-of-type):not(:last-of-type) .dcg-mq-editable-field, .dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata .dcg-row:first-of-type .dcg-cell:not(:first-of-type):not(:last-of-type) .dcg-static-mathquill-view {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-tabledata .dcg-row .dcg-cell {
+    border: 0.5px solid #FFF !important;
+}
+.dcg-calculator-api-container .dcg-circular-icon-container {
+    width: 5px !important;
+    height: 5px !important;
+}
+.dcg-calculator-api-container .dcg-expressionitem.dcg-expressiontable .dcg-table-icon-container {
+    top: 18px;
+    z-index: 5 !important;
+    opacity: 50%;
+}
+.dcg-calculator-api-container .dcg-circular-icon.dcg-hidden::before {
+    opacity: 100%;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-text-mode.dcg-mq-hasCursor {
+    outline: 1px solid #AAA !important;
+    box-shadow: none !important;
+}
+#dcg-header-container {
+    zoom: 50%;
+}
+.dcg-calculator-api-container .dcg-header .align-left-container .title-div .save-btn-container {
+    position: none;
+}
+.dcg-calculator-api-container #graph-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+}
+.dcg-calculator-api-container .dcg-mq-root-block, .dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-root-block {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-binary-operator,
+.dcg-calculator-api-container .dcg-mq-math-mode .dcg-mq-binary-operator {
+    padding: 0px !important;
+}
+.dcg-calculator-api-container .dcg-smart-textarea-container textarea.dcg-smart-textarea, .dcg-calculator-api-container .dcg-smart-textarea-container .dcg-displayTextarea {
+    padding: 0px !important;
+    font-size: 100%;
+}
+.dcg-calculator-api-container .dcg-mq-editable-field .dcg-mq-latex-command-input {
+    margin: 0.5px !important;
+    padding: 0px !important;
+    border: 1px solid #AAA;
+}
+.dcg-icon-remove {
+    visibility: hidden !important;
+}
