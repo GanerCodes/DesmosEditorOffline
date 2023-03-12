@@ -1,3 +1,62 @@
+const createTable = function(name, size) {
+    return {
+        "type": "table",
+        "columns": [...Array(size).keys()].map(x => ({
+            "latex": `Z_{${name}${x}}`,
+            "hidden": true,
+            "pointStyle": "POINT",
+            "pointSize": "",
+            "pointOpacity": "",
+            "lineStyle": "SOLID",
+            "lineWidth": "",
+            "lineOpacity": "",
+            "points": true,
+            "lines": false,
+            "dragMode": "NONE",
+            "values": [...Array(size)].map(x => "0")}))};
+}
+
+const parseTableMacro = function(str) { // chatGPT
+    const regex = /^T\s+([a-zA-Z0-9]+)\s+(\d+)$/;
+    const match = regex.exec(str);
+    
+    if (match === null) return null;
+
+    const name = match[1];
+    const number = parseInt(match[2], 10);
+    
+    return { name, number };
+}
+
+const checkMacros = function() {
+    const idx = Calc.selectedExpressionId;
+    if(!idx) return;
+    const state = Calc.getState();
+    const exprs = state['expressions']['list'];
+    let modId = -1;
+    for(let i = 0; i < exprs.length; i++) {
+        const e = exprs[i];
+        if(!(e['id'] == idx && e['type'] == "text" && e['text'])) continue;
+        const p = parseTableMacro(e['text']);
+        if(!p) continue;
+        const table = createTable(p['name'], p['number']);
+        table['id'] = e['id'];
+        if(e['folderId']) table['folderId'] = e['folderId'];
+        modId = e['id'];
+        // Calc.removeExpression({'id': e['id']})
+        // Calc.setExpression(table);
+        exprs[i] = table;
+    }
+    state['expressions']['list'] = exprs;
+    if(modId != -1) { // eeeee
+        Calc.setBlank();
+        Calc.setState(state);
+        setTimeout(() => {
+            document.querySelector(`[expr-id="${modId}"]`) .children[0].children[0].children[0].children[0].children[0].children[0].children[0].dispatchEvent(new Event("dcg-tapstart"));
+        }, 100);
+    }
+}
+
 function fixShortcuts() {
     $(document).keydown((e) => {
         e.superKey = e["originalEvent"].getModifierState("OS");
@@ -11,7 +70,12 @@ function fixShortcuts() {
         const CtrlAlt = e.ctrlKey && !e.shiftKey && e.altKey && !e.superKey;
         const ShiftAlt = !e.ctrlKey && e.shiftKey && e.altKey && !e.superKey;
         const CtrlAltShift = e.ctrlKey && e.shiftKey && e.altKey && !e.superKey;
-
+        
+        if(Ctrl && e.code == "KeyM") {
+            checkMacros();
+            return;
+        }
+        
         // Close a dialog
         if (noMod && e.code === "Escape") {
             const dcg_elt = $("#dcg-modal-container .dcg-icon-remove");

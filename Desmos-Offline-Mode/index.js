@@ -7,8 +7,6 @@ process.env.NODE_ENV = "production";
 const menu = require("./backend/create-menu");
 require("./backend/setup-ipc").setup();
 
-// npm install electron-extensions
-
 function createWindow(filePath) {
     const win = new BrowserWindow({
         width: 1280,
@@ -21,7 +19,6 @@ function createWindow(filePath) {
         }
     });
     // win.webContents.openDevTools();
-    // session.defaultSession.loadExtension("../darkreader/build/release/chrome").then(console.log);
 
     Menu.setApplicationMenu(menu);
 
