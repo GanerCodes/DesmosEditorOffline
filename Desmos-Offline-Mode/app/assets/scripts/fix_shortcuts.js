@@ -1,4 +1,5 @@
 const createTable = function(name, size) {
+    size = Math.min(size, 12);
     return {
         "type": "table",
         "columns": [...Array(size).keys()].map(x => ({
