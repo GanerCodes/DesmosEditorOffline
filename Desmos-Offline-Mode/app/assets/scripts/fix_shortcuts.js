@@ -35,18 +35,26 @@ const checkMacros = function() {
     const state = Calc.getState();
     const exprs = state['expressions']['list'];
     let modId = -1;
+    let lastExpr = null;
     for(let i = 0; i < exprs.length; i++) {
         const e = exprs[i];
-        if(!(e['id'] == idx && e['type'] == "text" && e['text'])) continue;
-        const p = parseTableMacro(e['text']);
-        if(!p) continue;
-        const table = createTable(p['name'], p['number']);
-        table['id'] = e['id'];
-        if(e['folderId']) table['folderId'] = e['folderId'];
-        modId = e['id'];
-        // Calc.removeExpression({'id': e['id']})
-        // Calc.setExpression(table);
-        exprs[i] = table;
+        if(e['id'] == idx && e['type'] == "text" && e['text']) {
+            const p = parseTableMacro(e['text']);
+            if(p) {
+                const table = createTable(p['name'], p['number']);
+                table['id'] = e['id'];
+                if(e['folderId']) table['folderId'] = e['folderId'];
+                modId = e['id'];
+                exprs[i] = table;
+            }else if(e["text"] == "c") {
+                if(lastExpr != null && lastExpr['type'] == "table") {
+                    console.log(lastExpr);
+                    exprs[i] = lastExpr;
+                    modId = e['id'];
+                }
+            }
+        }
+        lastExpr = e;
     }
     state['expressions']['list'] = exprs;
     if(modId != -1) { // eeeee
