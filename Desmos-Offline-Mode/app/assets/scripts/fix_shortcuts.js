@@ -29,6 +29,15 @@ const parseTableMacro = function(str) { // chatGPT
     return { name, number };
 }
 
+function addSubscriptName(text, str) {
+    if (text.includes('}')) {
+        const lastIndex = text.lastIndexOf('}');
+        return text.slice(0, lastIndex) + str + text.slice(lastIndex);
+    } else {
+        return `${text}_{${str}}`;
+    }
+}
+
 const checkMacros = function() {
     const idx = Calc.selectedExpressionId;
     if(!idx) return;
@@ -46,10 +55,14 @@ const checkMacros = function() {
                 if(e['folderId']) table['folderId'] = e['folderId'];
                 modId = e['id'];
                 exprs[i] = table;
-            }else if(e["text"] == "c") {
+            }else if(e["text"][0] == 'c' && (e["text"].length == 1 || e["text"][1] == ' ')) {
                 if(lastExpr != null && lastExpr['type'] == "table") {
-                    console.log(lastExpr);
-                    exprs[i] = lastExpr;
+                    exprs[i] = JSON.parse(JSON.stringify(lastExpr));
+                    if(e["text"].length > 1) {
+                        const addr = e["text"].substring(2);
+                        for(const col of exprs[i]["columns"])
+                            col["latex"] = addSubscriptName(col["latex"], addr);
+                    }
                     modId = e['id'];
                 }
             }
